@@ -1,24 +1,23 @@
-<%= render("layouts/errors", :object => @message) %>
-<%= form_for @message do |f| %>
+<%= form_for @contact do |f| %>
 
   <div class="form-group">
     <div class="col-md-6">
-      <%= f.label :to %></br>
-      <%= f.text_field :to, class: "form-control" %>
+      <%= f.label :name %></br>
+      <%= f.text_field :name, class: "form-control" %>
     </div>
   </div><br><br><br>
 
   <div class="form-group">
     <div class="col-md-6">
-      <%= f.label :from %></br>
-      <%= f.text_field :from, class: "form-control" %>
+      <%= f.label :number %></br>
+      <%= f.text_field :number, class: "form-control" %>
     </div>
   </div><br><br><br>
 
   <div class="form-group">
     <div class="col-md-6">
-      <%= f.label :body %></br>
-      <%= f.text_field :body, class: "form-control" %>
+      <%= f.label :email %></br>
+      <%= f.text_field :email, class: "form-control" %>
     </div>
   </div><br><br><br>
 

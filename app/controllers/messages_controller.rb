@@ -5,7 +5,8 @@ class MessagesController < ApplicationController
   end
 
   def new
-    @message = Message.new
+    @contacts = Contact.all
+    @message = Message.new(:to => params[:contact_id])
   end
 
   def create

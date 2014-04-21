@@ -3,9 +3,10 @@
 <ul>
   <% @messages.each do |m| %>
     <li>Sent to: <%= m.to %>
-        Text:         <%= m.body %>
+        Text:    <%= m.body %>
     </li>
   <% end %>
 </ul>
 
 <%= link_to "New Message", new_message_path, :class => "btn btn-default btn-lg" %>
+<%= link_to "Add new Contact", new_contact_path, :class => "btn btn-default btn-lg" %>
