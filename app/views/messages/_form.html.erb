@@ -1,5 +1,6 @@
-_form.html.erb
-<%= form_for @product, :html => { :multipart => true } do |f| %>
+<%= render("layouts/errors", :object => @message) %>
+<%= form_for @message do |f| %>
+
   <div class="form-group">
     <%= f.label :to %></br>
     <%= f.text_field :to %>

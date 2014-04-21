@@ -1,0 +1,10 @@
+<h1>Here is a list of your messages</h1>
+
+<ul>
+  <% @messages.each do |m| %>
+    <li><%= m.to %>
+        <%= m.from %>
+        <%= m.body %>
+    </li>
+  <% end %>
+</ul>
