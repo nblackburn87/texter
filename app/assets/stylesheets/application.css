@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+#submit {
+  padding-left: 15px;
+}
