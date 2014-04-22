@@ -16,6 +16,17 @@
   padding-left: 15px;
 }
 
-ul {
+/*ul {
   list-style-type: none;
+}*/
+
+body {
+  padding-top: 70px;
 }
+
+ul {
+  width: 300px; list-style: none; line-height: normal;
+}
+li {
+   width: 50%; margin: 5px; display: block;
+  }
