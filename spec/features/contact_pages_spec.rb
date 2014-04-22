@@ -14,5 +14,3 @@ describe Contact do
     find_field('message_to').value.should eq "#{contact.number}"
   end
 end
-
-# spec currently does not pass

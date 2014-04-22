@@ -1,6 +1,6 @@
 <h2><%= @contact.name %></h2>
 <ul>
-    <p>Phone: <%= link_to "#{@contact.number}", new_contact_message_path(@contact.number) %></p>
+    <p>Phone: <%= link_to "#{@contact.number}", new_contact_message_path(@contact) %></p>
     <p>Email: <%= @contact.email %></p>
 </ul>
 
