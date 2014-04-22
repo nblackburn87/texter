@@ -15,12 +15,28 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new message_params
-    if @message.save
-      flash[:notice] = "Your message was sent."
+    recipients = params[:message][:to]
+    if recipients.length > 10 && recipients.include?(',')
+      recipients = recipients.split(',')
+      recipients.each do |recipient|
+        params[:message][:to] = recipient
+        @message = Message.new message_params
+        if @message.save
+          flash[:notice] = "Your message was sent."
+        else
+          puts "At least one message failed to send."
+        end
+      end
       redirect_to messages_path
     else
-      render 'new'
+      @message = Message.new message_params
+      binding.pry
+      if @message.save
+        flash[:notice] = "Your message was sent."
+        redirect_to messages_path
+      else
+        render 'new'
+      end
     end
   end
 
