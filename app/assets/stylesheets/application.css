@@ -12,19 +12,22 @@
  *= require_tree .
  */
 
+* {
+  color: white;
+}
 #submit {
   padding-left: 15px;
 }
 
-/*ul {
+ul {
   list-style-type: none;
-}*/
-
-body {
-  padding-top: 70px;
 }
 
-ul {
+body {
+  padding-top: 70px; background-color: #525047;
+}
+
+#contacts {
   width: 300px; list-style: none; line-height: normal;
 }
 li {

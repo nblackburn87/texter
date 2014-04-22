@@ -1,6 +1,6 @@
 <h1>Here are your contacts</h1>
 
-<ul>
+<ul id="contacts">
   <% @contacts.each do |c| %>
     <li>
         Name:  <%= link_to "#{c.name}", contact_path(c.id) %> <br>
