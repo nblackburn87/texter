@@ -6,8 +6,12 @@ class MessagesController < ApplicationController
 
   def new
     @contacts = Contact.all
-    @contact = Contact.find(params[:contact_id])
-    @message = Message.new(:to => @contact.number)
+    begin
+      @contact = Contact.find(params[:contact_id])
+      @message = Message.new(:to => @contact.number)
+    rescue
+      @message = Message.new
+    end
   end
 
   def create
